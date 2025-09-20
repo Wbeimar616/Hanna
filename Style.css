@@ -879,7 +879,7 @@ body {
   top: -3vmin;
   transform: rotateY(-180deg) scale(0.9) !important;
   -webkit-animation: flower__g-front__leaf-left-ans-2 1s 4.6s ease-in backwards !important;
-  animation: flower__g-front__leaf-left-ans-2 1s 4.6s ease-in backwards !important;
+  animation: flower__g-front__leaf-left-ans 1s 4.6s ease-in backwards !important;
 }
 @-webkit-keyframes flower__g-front__leaf-left-ans-2 {
   0% {
@@ -2003,7 +2003,7 @@ body {
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
-  font-size: 5vw;
+  font-size: 3vw;
   z-index: 999;
   -webkit-text-stroke: 1px #ffffff;
   text-stroke: 2px #fff; /* Para navegadores compatibles */
@@ -2037,4 +2037,22 @@ body {
     font-size: 7vw; /* Más pequeño aún en pantallas móviles */
   }
 }
+.emoji {
+  position: fixed;
+  font-size: 2.5rem;
+  pointer-events: none;
+  transform: translate(var(--x), var(--y)) rotate(var(--rotate));
+  animation: emoji-float var(--duration) ease-out forwards;
+  z-index: 1000;
+}
 
+@keyframes emoji-float {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(1) rotate(var(--rotate));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translate(var(--x), calc(var(--y) - 200px)) scale(1.5) rotate(var(--rotate));
+  }
+}
