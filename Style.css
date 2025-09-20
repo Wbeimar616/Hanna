@@ -2003,7 +2003,7 @@ body {
   opacity: 0;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
-  font-size: 3vw;
+  font-size: 5vw;
   z-index: 999;
   -webkit-text-stroke: 1px #ffffff;
   text-stroke: 2px #fff; /* Para navegadores compatibles */
@@ -2037,3 +2037,4 @@ body {
     font-size: 7vw; /* Más pequeño aún en pantallas móviles */
   }
 }
+
